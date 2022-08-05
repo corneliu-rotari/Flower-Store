@@ -1,0 +1,39 @@
+<div class="details" [ngClass]="{ dark: isDarkMode }">
+  <div class="details__header">
+    <div class="details__header-title">{{ flower?.flower_name! }}</div>
+    <button mat-icon-button (click)="switchDialogTheme()">
+      <mat-icon>sunny</mat-icon>
+    </button>
+    <button mat-icon-button (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div class="wrapper">
+    <div class="details__content">
+      <div class="details__content-section">
+        <p class="details__content-section-title">Details</p>
+      </div>
+      <div class="details__content-item">
+        <div class="details__content-prop">Colour:</div>
+        <span class="details__content-value"> {{ flower?.color }} </span>
+      </div>
+      <div class="details__content-item">
+        <div class="details__content-prop">Price:</div>
+        <span class="details__content-value"> {{ flower?.price! }} RON </span>
+      </div>
+
+      <div class="details__content-item">
+        <div class="details__content-prop">ID:</div>
+        <span class="details__content-value">
+          {{ flower?.flower_id! }}
+        </span>
+      </div>
+
+      <div class="details__divider"></div>
+    </div>
+    <div class="divider-vertical"></div>
+    <div class="details__pic">
+      <img class="imaginea" [src]="flower?.flower_image!" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<mat-toolbar class="navbar">
+    <div class="navbar__title">Flower Store</div>
+
+  <mat-chip-list aria-label="route selection">
+    <mat-chip class="navbar__button">
+      <mat-icon>home</mat-icon>
+      <a routerLink="">Home</a>
+    </mat-chip>
+    <mat-chip class="navbar__button">
+      <mat-icon> local_florist</mat-icon>
+      <a routerLink="store">Store</a>
+    </mat-chip>
+    <mat-chip class="navbar__button">
+      <mat-icon>shopping_cart</mat-icon>
+      <a routerLink="shopping-cart">Shopping cart</a>
+    </mat-chip>
+    <mat-chip class="navbar__button" *ngIf="!authenticated">
+      <mat-icon>account_circle</mat-icon>
+      <a routerLink="log-in">Log-in
+      </a>
+    </mat-chip>
+    <mat-chip class="navbar__button" *ngIf="!authenticated">
+      <mat-icon>account_circle</mat-icon>
+      <a routerLink="register">Register
+      </a>
+    </mat-chip>
+    <mat-chip class="navbar__button" *ngIf="authenticated">
+      <mat-icon>account_circle</mat-icon>
+      <a routerLink="/login" class="nav-link" (click)="logout()">Logout
+      </a>
+    </mat-chip>
+</mat-chip-list>
+</mat-toolbar>
+
+<!--
+<nav class="navigation" flower_id="navigation">
+    <div class="container">
+      <div class="logo">logo</div>
+      <ul class="navigation-links">
+        <li><a routerLink="" style = "text-decoration: none; color: #888;">home</a></li>
+        <li><a routerLink="flowerdisplay" style = "text-decoration: none; color: #888;"></a>shop</li>
+        <li>about</li>
+        <li>contact</li>
+        <a href="" class="icon" onclick="responsiveMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </ul>
+    </div>
+  </nav> -->

@@ -1,0 +1,12 @@
+<form [formGroup]="form" (submit)="submit()">
+  <h1 class="h3 mb-3 fw-normal">Please add a flower</h1>
+
+  <input formControlName="flower_name" class="form-control" placeholder="Flower Name" required>
+
+  <input formControlName="color" type="text" class="form-control" placeholder="Color" required>
+
+  <input formControlName="flower_image" type="text" class="form-control" placeholder="Image URL" required>
+
+  <input formControlName="price" type="number" class="form-control" placeholder="Flower Price" required>
+  <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+</form>

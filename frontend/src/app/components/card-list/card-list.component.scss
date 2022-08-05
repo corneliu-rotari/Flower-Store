@@ -1,0 +1,11 @@
+@import '~src/stylesheets/_mixins';
+
+.list {
+  @include display-flex(row);
+
+  &__item {
+    margin: 1.5%;
+    width: 17%;
+    min-width: 300px;
+  }
+}

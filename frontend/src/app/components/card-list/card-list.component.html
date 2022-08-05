@@ -1,0 +1,6 @@
+<div class="list">
+    <div class="list__item" *ngFor="let flower of flowerList">
+        <app-card (click)="openDetails(flower)" [flower]="flower">
+        </app-card>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+@import '~src/stylesheets/_mixins';
+@import '~src/stylesheets/_variables';
+
+.navbar{
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer {
+  border: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
